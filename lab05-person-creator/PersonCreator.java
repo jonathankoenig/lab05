@@ -38,7 +38,12 @@ public class PersonCreator
     // These let the user input the various details for the perzon.
     // There is also a method that lets the user see what these details are.
     
-    // Sets the age of the person
+    /**
+     * Description: Sets the age of the person to what the user inputs. If the age is over 150 or less than 0, then an error is given.
+     * Input: getAge int
+     * Purpose: Lets the user set the age of the person.
+     * Example: If 20 is inputed, then the person's age will be set to 20.
+     */
     public void setAge(int getAge)
     {
         age = getAge;
@@ -51,9 +56,11 @@ public class PersonCreator
         }
     }
     
-    // Sets the sex of a person
     /**
-     * Put "M" for Male or "F" for Female
+     * Description: Sets the sex of a person. If the user inputs "M", the person's sex will be male. IF the user inputs "F", the person's sex will be female. If something else is inputted, an error will be given.
+     * Input: getSex String
+     * Purpose: Lets the user change the sex of the person.
+     * Example: If the user inputs "M", then the person's sex will be male. If the user inputs "t", then an error is given and the person's sex will be unknown.
      */
     public void setSex(String getSex)
     {
@@ -76,19 +83,37 @@ public class PersonCreator
         }
     }
     
-    // Sets the height of the person in feet and inches
+    /**
+     * Description: Sets the height of the person in feet and inches.
+     * Input: getFt int
+     *        getIn int
+     * Purpose: Lets the user input the height of the person in feet and inches.
+     * Example: If getFt is 5 and getIn is 10, then the height of the person will be 5'10.
+     */
     public void setHeight(int getFt, int getIn)
     {
         height = getFt + "'" + getIn;
     }
     
-    // Sets the weight of the person
+    /**
+     * Description: Sets the weight of the person.
+     * Input: getWeight int
+     * Purpose: Lets the user input the weight of the person.
+     * Example: If the user inputs 150, then the person's weight will be 150.
+     */
     public void setWeight(int getWeight)
     {
         weight = getWeight;
     }
     
-    // Sets the SSN of the person
+    /**
+     * Description: Sets the SSN of the person. If any part of the SSN is an invalid number, an error is given.
+     * Input: getssn1 int
+     *        getssn2 int
+     *        getssn3 int
+     * Purpose: Lets the user set the SSN of the person.
+     * Example: If the user inputs 20, then 10, then 2453, the SSN of the person will be 20-10-2453.
+     */
     public void setSSN(int getssn1, int getssn2, int getssn3)
     {
         // If the first part of the ssn is less than 0 or greater than 999, an error is given
@@ -116,8 +141,15 @@ public class PersonCreator
         }
     }
     
-    
-    // Sets the address of the person by asking for house number, street name, city name, and state name
+    /**
+     * Description: Sets the address of the person by asking for house number, street name, city name, and state name. If house number is negative or greater than 99,999, then an error will be given.
+     * Input: getHouseNum int
+     *        getStreet String
+     *        getCity String
+     *        getState String
+     * Purpose: Lets the user input the address of the person.
+     * Example: If the user inputs 1 for getHouseNum, Blue Lane for getStreet, Levittown for getCity, and NY for getState, then the person's address will be 1 Blue Lane, Levittown NY.
+     */
     public void setAddress(int getHouseNum, String getStreet, String getCity, String getState)
     {
         
@@ -132,7 +164,14 @@ public class PersonCreator
         
     }
     
-    // Sets the phone number of the person
+    /**
+     * Description: Sets the phone number of the person. If any part of the phone number is wrong, an error is given.
+     * Input: getPhoneNum1 int
+     *        getPhoneNum2 int
+     *        getPhoneNum3 int
+     * Purpose: Lets the user input the phone number of the person.
+     * Example: If th user inputs 200 for getPhoneNum1, 230 for getPhoneNum2, and 1456 for getPhoneNum3, then the person's phone number will be 200-230-1456.
+     */
     public void getPhoneNum(int getPhoneNum1, int getPhoneNum2, int getPhoneNum3)
     {
         // If the first part of the number is less than 100 or greater than 999, then an error is given
@@ -157,7 +196,14 @@ public class PersonCreator
         }
     }
     
-    // Sets the date of birth of the person
+    /**
+     * Description: Sets the date of birth of the person. If the input for the day is invalid, then an error is given.
+     * Input: getDay int
+     *        getMonth String
+     *        getYear String
+     * Purpose: Lets the user set the date of birth of the person.
+     * Example: If the user inputs 10 for getDay, July for getMonth, and 2006 for getYear, then the person's dateOfBirth will be set to July 10, 2006.
+     */
     public void getDateOfBirth(int getDay, String getMonth, int getYear)
     {
        
@@ -171,7 +217,11 @@ public class PersonCreator
         }
     }
     
-    // Prints out all the info of the person
+    /**
+     * Description: Prints out all the info of the person.
+     * Purpose: Lets the user see all the info of the person.
+     * Example: If the user sets values for all the field variables and uses the function, the function will print out all the info the user inputed for the person.
+     */
     public void printInfo()
     {
         System.out.println("Name: " + name);
